@@ -1,8 +1,8 @@
-baseURL = 'https://iretiret.netlify.app/'
-languageCode = 'zh-cn'
-title = 'IretireT'
-theme = 'PaperMod'
-enableRobotsTXT = false
+baseURL: 'https://iretiret.netlify.app/'
+languageCode: 'zh-cn'
+title: 'IretireT'
+theme: 'PaperMod'
+enableRobotsTXT: false
 buildDrafts: false
 buildFuture: false
 buildExpired: false
