@@ -1,7 +1,8 @@
 # static/admin/config.yml
 
 backend:
-  name: git-gateway
+  name: github
+  repo: TandyBlow/IretireT
   branch: main # 你的主分支名
 
 media_folder: "static/images/uploads" # 上传的图片存放在这里
