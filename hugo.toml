@@ -2,7 +2,7 @@ baseURL = 'https://iretiret.netlify.app/'
 languageCode = 'zh-cn'
 title = 'IretireT'
 theme = 'PaperMod'
-enableRobotsTXT: false
+enableRobotsTXT = false
 buildDrafts: false
 buildFuture: false
 buildExpired: false
@@ -18,7 +18,7 @@ params:
   keywords: [Blog, Portfolio, PaperMod]
   author: TandyBlow
   # author: ["TandyBlow", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  #images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -33,11 +33,6 @@ params:
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: false
-  tocopen: false
 
   #assets:
     # disableHLJS: true # to disable highlight.js
