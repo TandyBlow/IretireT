@@ -15,35 +15,27 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      # --- 基础信息 ---
       - {label: "标题 (Title)", name: "title", widget: "string"}
       - {label: "发布日期 (Date)", name: "date", widget: "datetime"}
       - {label: "作者 (Author)", name: "author", widget: "string", default: "Me"}
       - {label: "标签 (Tags)", name: "tags", widget: "list", hint: "按回车添加多个标签"}
       - {label: "描述 (Description)", name: "description", widget: "text"}
       - {label: "正文 (Body)", name: "body", widget: "markdown"}
-      # --- 文章行为控制 (开关组) ---
-      - label: "文章行为控制"
-        name: "options"
-        widget: "object"
-        collapsed: true # 默认折叠此区域，保持界面整洁
-        fields:
-          - {label: "设为草稿 (Draft)", name: "draft", widget: "boolean", default: false}
-          - {label: "显示目录 (Show TOC)", name: "showToc", widget: "boolean", default: true}
-          - {label: "默认展开目录 (TOC Open)", name: "TocOpen", widget: "boolean", default: false}
-          - {label: "隐藏头部信息 (Hide Meta)", name: "hidemeta", widget: "boolean", default: false}
-          - {label: "开启评论 (Comments)", name: "comments", widget: "boolean", default: false}
-          - {label: "禁用代码高亮 (Disable HLJS)", name: "disableHLJS", widget: "boolean", default: false}
-          - {label: "禁用分享按钮 (Disable Share)", name: "disableShare", widget: "boolean", default: false}
-          - {label: "隐藏摘要 (Hide Summary)", name: "hideSummary", widget: "boolean", default: false}
-          - {label: "在搜索中隐藏 (Search Hidden)", name: "searchHidden", widget: "boolean", default: false}
-          - {label: "显示阅读时间 (Show Reading Time)", name: "ShowReadingTime", widget: "boolean", default: true}
-          - {label: "显示面包屑导航 (Show BreadCrumbs)", name: "ShowBreadCrumbs", widget: "boolean", default: true}
-          - {label: "显示文章导航链接 (Show PostNavLinks)", name: "ShowPostNavLinks", widget: "boolean", default: true}
-          - {label: "显示字数统计 (Show Word Count)", name: "ShowWordCount", widget: "boolean", default: true}
-          - {label: "在列表页显示RSS按钮 (Show RSS Button)", name: "ShowRssButtonInSectionTermList", widget: "boolean", default: true}
-          - {label: "使用Hugo内置目录 (Use Hugo TOC)", name: "UseHugoToc", widget: "boolean", default: true}
-      # --- 封面图片设置 ---
+      - {label: "设为草稿 (Draft)", name: "draft", widget: "boolean", default: false}
+      - {label: "显示目录 (Show TOC)", name: "showToc", widget: "boolean", default: true}
+      - {label: "默认展开目录 (TOC Open)", name: "TocOpen", widget: "boolean", default: false}
+      - {label: "隐藏头部信息 (Hide Meta)", name: "hidemeta", widget: "boolean", default: false}
+      - {label: "开启评论 (Comments)", name: "comments", widget: "boolean", default: false}
+      - {label: "禁用代码高亮 (Disable HLJS)", name: "disableHLJS", widget: "boolean", default: false}
+      - {label: "禁用分享按钮 (Disable Share)", name: "disableShare", widget: "boolean", default: false}
+      - {label: "隐藏摘要 (Hide Summary)", name: "hideSummary", widget: "boolean", default: false}
+      - {label: "在搜索中隐藏 (Search Hidden)", name: "searchHidden", widget: "boolean", default: false}
+      - {label: "显示阅读时间 (Show Reading Time)", name: "ShowReadingTime", widget: "boolean", default: true}
+      - {label: "显示面包屑导航 (Show BreadCrumbs)", name: "ShowBreadCrumbs", widget: "boolean", default: true}
+      - {label: "显示文章导航链接 (Show PostNavLinks)", name: "ShowPostNavLinks", widget: "boolean", default: true}
+      - {label: "显示字数统计 (Show Word Count)", name: "ShowWordCount", widget: "boolean", default: true}
+      - {label: "在列表页显示RSS按钮 (Show RSS Button)", name: "ShowRssButtonInSectionTermList", widget: "boolean", default: true}
+      - {label: "使用Hugo内置目录 (Use Hugo TOC)", name: "UseHugoToc", widget: "boolean", default: true}
       - label: "封面图片 (Cover Image)"
         name: "cover"
         widget: "object"
@@ -54,7 +46,6 @@ collections:
           - {label: "图片标题 (Caption)", name: "caption", widget: "string", required: false}
           - {label: "设为隐藏 (Hidden)", name: "hidden", widget: "boolean", default: false}
           - {label: "相对路径 (Relative)", name: "relative", widget: "boolean", default: false, hint: "当使用 Page Bundles 时设为 true"}
-      # --- 文章编辑链接设置 ---
       - label: "编辑文章链接 (Edit Post Link)"
         name: "editPost"
         widget: "object"
@@ -63,7 +54,6 @@ collections:
           - {label: "仓库内容URL", name: "URL", widget: "string", required: false, hint: "例如: https://github.com/user/repo/content"}
           - {label: "显示文本", name: "Text", widget: "string", default: "Suggest Changes", required: false}
           - {label: "附加文件路径", name: "appendFilePath", widget: "boolean", default: true, required: false}
-      # --- 其他高级选项 ---
       - label: "高级选项"
         name: "advanced"
         widget: "object"
