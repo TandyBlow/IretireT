@@ -1,0 +1,64 @@
+# static/admin/config.yml
+
+backend:
+  name: github
+  repo: TandyBlow/IretireT
+  branch: main # 你的主分支名
+
+media_folder: "static/images/uploads" # 上传的图片存放在这里
+public_folder: "/images/uploads" # 在文章中引用图片的路径
+
+collections:
+  - name: "post"
+    label: "文章"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题 (Title)", name: "title", widget: "string"}
+      - {label: "发布日期 (Date)", name: "date", widget: "datetime"}
+      - {label: "作者 (Author)", name: "author", widget: "string", default: "Me"}
+      - {label: "标签 (Tags)", name: "tags", widget: "list", hint: "按回车添加多个标签"}
+      - {label: "描述 (Description)", name: "description", widget: "text"}
+      - {label: "正文 (Body)", name: "body", widget: "markdown"}
+      - {label: "设为草稿 (Draft)", name: "draft", widget: "boolean", default: false}
+      - {label: "显示目录 (Show TOC)", name: "showToc", widget: "boolean", default: true}
+      - {label: "默认展开目录 (TOC Open)", name: "TocOpen", widget: "boolean", default: false}
+      - {label: "隐藏头部信息 (Hide Meta)", name: "hidemeta", widget: "boolean", default: false}
+      - {label: "开启评论 (Comments)", name: "comments", widget: "boolean", default: false}
+      - {label: "禁用代码高亮 (Disable HLJS)", name: "disableHLJS", widget: "boolean", default: false}
+      - {label: "禁用分享按钮 (Disable Share)", name: "disableShare", widget: "boolean", default: false}
+      - {label: "隐藏摘要 (Hide Summary)", name: "hideSummary", widget: "boolean", default: false}
+      - {label: "在搜索中隐藏 (Search Hidden)", name: "searchHidden", widget: "boolean", default: false}
+      - {label: "显示阅读时间 (Show Reading Time)", name: "ShowReadingTime", widget: "boolean", default: true}
+      - {label: "显示面包屑导航 (Show BreadCrumbs)", name: "ShowBreadCrumbs", widget: "boolean", default: true}
+      - {label: "显示文章导航链接 (Show PostNavLinks)", name: "ShowPostNavLinks", widget: "boolean", default: true}
+      - {label: "显示字数统计 (Show Word Count)", name: "ShowWordCount", widget: "boolean", default: true}
+      - {label: "在列表页显示RSS按钮 (Show RSS Button)", name: "ShowRssButtonInSectionTermList", widget: "boolean", default: true}
+      - {label: "使用Hugo内置目录 (Use Hugo TOC)", name: "UseHugoToc", widget: "boolean", default: true}
+      - label: "封面图片 (Cover Image)"
+        name: "cover"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "图片路径/URL", name: "image", widget: "image"}
+          - {label: "图片描述 (Alt Text)", name: "alt", widget: "string", required: false}
+          - {label: "图片标题 (Caption)", name: "caption", widget: "string", required: false}
+          - {label: "设为隐藏 (Hidden)", name: "hidden", widget: "boolean", default: false}
+          - {label: "相对路径 (Relative)", name: "relative", widget: "boolean", default: false, hint: "当使用 Page Bundles 时设为 true"}
+      - label: "编辑文章链接 (Edit Post Link)"
+        name: "editPost"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "仓库内容URL", name: "URL", widget: "string", required: false, hint: "例如: https://github.com/user/repo/content"}
+          - {label: "显示文本", name: "Text", widget: "string", default: "Suggest Changes", required: false}
+          - {label: "附加文件路径", name: "appendFilePath", widget: "boolean", default: true, required: false}
+      - label: "高级选项"
+        name: "advanced"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "权重 (Weight)", name: "weight", widget: "number", required: false, value_type: "int"}
+          - {label: "别名 (Aliases)", name: "aliases", widget: "list", required: false, hint: "文章的旧链接，用于重定向"}
+          - {label: "Canonical URL", name: "canonicalURL", widget: "string", required: false, hint: "用于SEO，指向文章的权威链接"}

@@ -16,7 +16,7 @@ params:
   title: IretireT
   description: "Create difference."
   keywords: [Blog, Portfolio, PaperMod]
-  author: TandyBlow
+  #author: TandyBlow
   # author: ["TandyBlow", "You"] # multiple authors
   #images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
@@ -65,7 +65,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "早上好，下午好，晚上好 \U0001F44B"
+    Title: "早上好，下午好，晚上好。"
     Content: "多晒太阳。"
 
   #socialIcons:
@@ -105,20 +105,21 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
-menu:
-  main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
-    - identifier: example
-      name: example.org
-      url: https://example.org
-      weight: 30
+  customCSS: ["css/custom.css"]
+#menu:
+#  main:
+#    - identifier: categories
+#      name: categories
+#      url: /categories/
+#      weight: 10
+#    - identifier: tags
+#      name: tags
+#      url: /tags/
+#      weight: 20
+#    - identifier: example
+#      name: example.org
+#      url: https://example.org
+#      weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
